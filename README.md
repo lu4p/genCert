@@ -1,5 +1,5 @@
-# Generate keys
-
+## Generate and Setup cryptographic keys
+TorRAT uses a tls certificate to encrypt transport and a Rsa Keypair to save files encrypted to the clients disk.
 The provided Keys are only for demonstration you will need to generate your own keys.
 
 ## Generate TLS certificate
@@ -13,7 +13,6 @@ Then you need to change the cert in ```~/go/src/github.com/lu4p/TorRat_client/cl
 ## Generate Rsa Keypair
 ```
 openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:4096
-
 openssl rsa -pubout -in private_key.pem -out public_key.pem
 ```
 
