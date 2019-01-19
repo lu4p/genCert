@@ -1,4 +1,3 @@
-# genCert
 ## Generate and Setup cryptographic keys
 TorRAT uses a tls certificate to encrypt transport and a Rsa Keypair to save files encrypted to the clients disk.
 The provided Keys are only for demonstration you will need to generate your own keys.
