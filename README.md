@@ -22,7 +22,7 @@ Usage of genCert:
 ```
 Example Certificate:
 ```
-./genCert --ca --ecdsa-curve P384 --host example.tld
+genCert --ca --ecdsa-curve P384 --host example.tld
 ```
 This will result in ```key.pem``` and ```cert.pem```
 
