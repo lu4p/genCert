@@ -1,5 +1,6 @@
 ## Generate a TLS certificate
 ```
+go get -v github.com/lu4p/genCert
 cd ~/go/src/github.com/lu4p/genCert/
 go build
 ./genCert --help
