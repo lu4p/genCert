@@ -2,11 +2,11 @@
 ```
 go get -v github.com/lu4p/genCert
 cd ~/go/src/github.com/lu4p/genCert/
-go build
-./genCert --help
+go install
+genCert --help
 ```
 ```
-Usage of ./genCert:
+Usage of genCert:
   -ca
     	whether this cert should be its own Certificate Authority
   -duration duration
