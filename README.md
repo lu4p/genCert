@@ -19,6 +19,12 @@ Usage of ./genCert:
   -start-date string
     	Creation date formatted as Jan 1 15:04:05 2011
 ```
+Example Certificate:
+```
+./genCert --ca --ecdsa-curve P384 --host example.tld
+```
+This will result in ```key.pem``` and ```cert.pem```
+
 ## Generate TLS certificate for ToRat
 ```
 cd ~/go/src/github.com/lu4p/genCert/
@@ -27,7 +33,7 @@ cp *.pem ~/go/src/github.com/lu4p/ToRat_server
 cat cert.pem
 openssl x509 -pubkey -noout -in cert.pem
 ```
-This will result in key.pem and cert.pem.
+This will result in ```key.pem``` and ```cert.pem```
 Then you need to change the cert in the serverCert var in ```~/go/src/github.com/lu4p/ToRat_client/client/netclient.go``` to the content of cert.pem.
 
 The PublicKey belongs in ```~/go/src/github.com/lu4p/ToRat_client/crypto/key.go```
