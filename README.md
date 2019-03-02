@@ -1,4 +1,4 @@
-### Generate TLS certificate
+## Generate TLS certificate for ToRat
 ```
 cd ~/go/src/github.com/lu4p/genCert/
 go run genCert.go --ca --host youronionadresshere.onion
