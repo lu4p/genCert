@@ -1,3 +1,4 @@
+<a href="https://circleci.com/gh/lu4p/genCert">![CircleCI (all branches)](https://img.shields.io/circleci/project/github/lu4p/genCert.svg)</a>
 ## Generate a TLS certificate
 ```
 go get -v github.com/lu4p/genCert
