@@ -25,6 +25,7 @@ Example Certificate:
 genCert --ca --ecdsa-curve P384 --host example.tld
 ```
 This will result in the PrivateKey ```key.pem``` and the TLS-Certificate ```cert.pem```
+
 Note: The PrivateKey should be kept PRIVATE, if the PrivateKey is disclosed an attacker is able to:
 - imperson you 
 - decrypt your traffic
