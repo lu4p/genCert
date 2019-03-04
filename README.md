@@ -3,11 +3,11 @@
 ```
 go get -v github.com/lu4p/genCert
 cd ~/go/src/github.com/lu4p/genCert/
-go install
-genCert --help
+go build
+./genCert --help
 ```
 ```
-Usage of genCert:
+Usage of ./genCert:
   -ca
     	whether this cert should be its own Certificate Authority
   -duration duration
@@ -23,7 +23,7 @@ Usage of genCert:
 ```
 Example Certificate:
 ```
-genCert --ca --ecdsa-curve P384 --host example.tld
+./genCert --ca --ecdsa-curve P384 --host example.tld
 ```
 This will result in the PrivateKey ```key.pem``` and the TLS-Certificate ```cert.pem```
 
