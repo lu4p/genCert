@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/lu4p/genCert.svg?style=svg)](https://circleci.com/gh/lu4p/genCert)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lu4p/genCert)](https://goreportcard.com/report/github.com/lu4p/genCert)
 ## Generate a TLS certificate
 ```
 go get -v github.com/lu4p/genCert
