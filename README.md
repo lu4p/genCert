@@ -2,13 +2,12 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/lu4p/genCert)](https://goreportcard.com/report/github.com/lu4p/genCert)
 ## Generate a TLS certificate
 ```
-go get -v github.com/lu4p/genCert
-cd ~/go/src/github.com/lu4p/genCert/
-go build
-./genCert --help
+cd ~
+go get -u -v github.com/lu4p/genCert
+genCert --help
 ```
 ```
-Usage of ./genCert:
+Usage of genCert:
   -ca
     	whether this cert should be its own Certificate Authority
   -duration duration
@@ -24,7 +23,7 @@ Usage of ./genCert:
 ```
 Example Certificate:
 ```
-./genCert --ca --ecdsa-curve P384 --host example.tld
+genCert --ca --ecdsa-curve P384 --host example.tld
 ```
 This will result in the PrivateKey ```key.pem``` and the TLS-Certificate ```cert.pem```
 
@@ -32,15 +31,3 @@ Note: The PrivateKey should be kept PRIVATE, if the PrivateKey is disclosed an a
 - imperson you 
 - decrypt your traffic
 - etc.
-
-## Generate TLS certificate for ToRat
-```
-cd ~/go/src/github.com/lu4p/genCert/
-go run genCert.go --ca --host youronionadresshere.onion
-cp *.pem ~/go/src/github.com/lu4p/ToRat_server
-cat cert.pem
-```
-This will result in ```key.pem``` and ```cert.pem```
-Then you need to change the cert in the serverCert var in ```~/go/src/github.com/lu4p/ToRat_client/client/netclient.go``` to the content of cert.pem.
-
-[ToRat](https://github.com/lu4p/ToRat)
